@@ -16,7 +16,7 @@
     // Disable the scroll to top functionality
     function disableScrollToTop() {
         window.scrollTo = function(x, y) {
-            if (y !== 0) {
+            if (y !== 0 && !location.href.includes("showconv=1")) {
                 window.scrollTo.originalFunc(x, y);
             }
         };
